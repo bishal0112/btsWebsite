@@ -1,0 +1,136 @@
+/* general styling */
+:root{
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+/* *{
+    border: 1px solid black;
+} */
+html{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(194, 185, 185);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    background-color: rgb(230, 224, 224);
+    border: 1px solid rgba(31, 255, 49, 0.7);
+    border-radius: 5px;
+    padding: 0.3rem 1.8px;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+img{
+    max-width: 100%;
+    max-height: 200px;
+}
+
+.wrapper {
+    display: grid;
+}
+
+/* header form here  */
+
+.menu-container{
+    margin: 0;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid lightgray;
+    display: grid;
+    grid-template-areas: 
+        'mc-left mc-right';
+
+}
+.menu-container-left {
+    grid-area: mc-left;
+    font-size: 2rem;
+    line-height: 1rem;
+}
+.menu-container-right{
+    text-align: center;
+    grid-area: mc-right;
+}
+.menu-container-right ul, .right-side-foot ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.menu-container-right p{
+    font-size: 2rem;
+}
+
+/* SCHEDULING PART  */
+.schedule {
+    background: linear-gradient(30deg, rgb(0, 0, 0), red, rgb(255, 255, 100), rgb(255, 98, 255), black);
+    text-align: center;
+    background-color: #fff;
+    margin-top: 15px;
+    height: 25vh;
+    line-height: 1rem;
+    opacity: 0.7;
+}
+.schedule h1{
+    font-size: 2.4rem;
+}
+.schedule p{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* concert timing here */
+.timing {
+    margin-top: 20px;
+    padding: 1rem 5rem;
+    display: grid;
+    border: 1px solid black;
+    background: #fff;
+    grid-template-columns: 20% 1fr;
+    gap: 25px;
+}
+
+.tim-right{
+    padding-top: 0.6rem;
+    padding-right: 9rem;
+    text-align: left;
+    line-height: 1rem;
+}
+.tim-left{ 
+    text-align: right;
+}
+.timing hr{
+    border: 1px solid lightgray;
+}
+
+
+
+
+/* footer from here */
+
+footer{
+    display: grid;
+    gap: 10px;
+    padding: 2rem;
+    margin-top: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    grid-template-areas: 
+        'ls-foot rs-foot';
+}
+.left-side-foot{
+    grid-area: ls-foot;
+}
+.right-side-foot{
+    grid-area: rs-foot;
+}
